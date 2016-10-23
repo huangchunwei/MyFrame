@@ -1,0 +1,228 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+//apply plugin: 'com.neenbedankt.android-apt' // 注释处理
+//GreenDao
+//apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "com.mevv.myframe"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        //是否分包
+//        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // It is not include NOTICE file
+        exclude 'META-INF/LICENSE' // It is not include LICENSE file
+    }
+
+    //不进行PNG检查
+//    aaptOptions {
+//        cruncherEnabled = false
+//        useNewCruncher = false
+//    }
+
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+        //预编译
+        preDexLibraries = false
+    }
+
+    //配置keystore
+    /*android {
+        signingConfigs {
+            debug {
+                storeFile file("findhouse.keystore")
+                storePassword '1234567i'
+                keyAlias 'findhouse'
+                keyPassword '1234567i'
+            }
+            release {
+                storeFile file("findhouse.keystore")
+                storePassword '1234567i'
+                keyAlias 'findhouse'
+                keyPassword '1234567i'
+            }
+        }
+    }*/
+
+
+    /*android.applicationVariants.all { variant ->
+
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                // 输出apk名称为app_v1.0_2015-xx-xx_xxxx.apk
+                //def fileName = "app_v${defaultConfig.versionName}_${releaseTime()}.apk"
+                def fileName = "app_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+       *//* variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent, defaultConfig.applicationId + "-"
+                    + buildType.name + "-v" + defaultConfig.versionName + "-" + defaultConfig.versionCode + ".apk");
+        }*//*
+    }*/
+
+    /*buildTypes {
+
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            //可调式
+            debuggable true
+            //版本后缀
+            versionNameSuffix "-debug"
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //不可调式
+            debuggable false
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+    }*/
+
+    /*//渠道Flavors
+    productFlavors {
+//        "releases" {}
+        "oppo" {
+            manifestPlaceholders = [CHANNEL_NAME: "oppo"]
+        }
+        "umone" {
+            manifestPlaceholders = [CHANNEL_NAME: "360"]
+        }
+        "yyb" {
+            manifestPlaceholders = [CHANNEL_NAME: "yyb"]
+        }
+        "wandoujia" {
+            manifestPlaceholders = [CHANNEL_NAME: "wandoujia"]
+        }
+        "anzhuo" {
+            manifestPlaceholders = [CHANNEL_NAME: "anzhuo"]
+        }
+        "baidu" {
+            manifestPlaceholders = [CHANNEL_NAME: "baidu"]
+        }
+        "anzhi" {
+            manifestPlaceholders = [CHANNEL_NAME: "anzhi"]
+        }
+        "taobao" {
+            manifestPlaceholders = [CHANNEL_NAME: "taobao"]
+        }
+        "mumayi" {
+            manifestPlaceholders = [CHANNEL_NAME: "mumayi"]
+        }
+        "gfan" {
+            manifestPlaceholders = [CHANNEL_NAME: "gfan"]
+        }
+        "lenovo" {
+            manifestPlaceholders = [CHANNEL_NAME: "lenovo"]
+        }
+        "wo" {
+            manifestPlaceholders = [CHANNEL_NAME: "wo"]
+        }
+        "xiaomi" {
+            manifestPlaceholders = [CHANNEL_NAME: "xiaomi"]
+        }
+        "huawei" {
+            manifestPlaceholders = [CHANNEL_NAME: "huawei"]
+        }
+        "meizu" {
+            manifestPlaceholders = [CHANNEL_NAME: "meizu"]
+        }
+        "jiuyi" {
+            manifestPlaceholders = [CHANNEL_NAME: "91"]
+        }
+        "yibajiu" {
+            manifestPlaceholders = [CHANNEL_NAME: "189"]
+        }
+        "yiliusan" {
+            manifestPlaceholders = [CHANNEL_NAME: "163"]
+        }
+//    yingyongbao {}
+//    wandoujia {}
+//    baidu {}
+//    "91" {}
+    }*/
+
+}
+
+//greendao {//greendao配置
+//    targetGenDir 'src/main/java/'
+//    schemaVersion 1;
+//}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:palette-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    //分包
+//    compile 'com.android.support:multidex:1.0.1'
+    //Butter Knife
+//    compile 'com.jakewharton:butterknife:8.2.1'
+//    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    //Retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-jackson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.0'
+    //Gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    //Rx
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.5'
+    //滑动关闭
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    //Glide装换工具
+//    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    // If you want to use the GPU Filters
+//    compile 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+    //原生Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+//    compile 'com.android.support:support-v4:19.1.0'
+    //EventBus
+//    compile 'org.greenrobot:eventbus:3.0.0'
+    //LeakCanary
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    //    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+}
