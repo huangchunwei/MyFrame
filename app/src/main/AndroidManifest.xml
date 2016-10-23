@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".common.base.CommonWebActivity"/>
         <activity android:name=".common.base.CommonFragmentActivity"/>
     </application>
 
