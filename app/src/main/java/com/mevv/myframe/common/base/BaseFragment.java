@@ -1,4 +1,4 @@
-package com.mevv.myframe.base;
+package com.mevv.myframe.common.base;
 
 import android.content.Context;
 import android.os.Bundle;

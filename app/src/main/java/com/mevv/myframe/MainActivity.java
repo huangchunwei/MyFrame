@@ -3,9 +3,9 @@ package com.mevv.myframe;
 import android.os.Bundle;
 import android.view.View;
 
-import com.mevv.myframe.base.BaseActivity;
-import com.mevv.myframe.base.CommonFragmentActivity;
-import com.mevv.myframe.base.FragmentId;
+import com.mevv.myframe.common.base.BaseActivity;
+import com.mevv.myframe.common.base.CommonFragmentActivity;
+import com.mevv.myframe.common.base.FragmentId;
 import com.mevv.myframe.common.util.SceneManager;
 
 public class MainActivity extends BaseActivity {

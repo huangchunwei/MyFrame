@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.mevv.myframe.R;
-import com.mevv.myframe.base.BaseActivity;
-import com.mevv.myframe.base.BaseSwipeBackActivity;
+import com.mevv.myframe.common.base.BaseActivity;
+import com.mevv.myframe.common.base.BaseSwipeBackActivity;
 
 
 /**

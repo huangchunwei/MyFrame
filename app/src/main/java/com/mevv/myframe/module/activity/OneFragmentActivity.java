@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.widget.FrameLayout;
 
 import com.mevv.myframe.R;
-import com.mevv.myframe.base.BaseActivity;
+import com.mevv.myframe.common.base.BaseActivity;
 import com.mevv.myframe.module.fragment.OneFragment;
 
 /**

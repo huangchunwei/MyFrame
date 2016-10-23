@@ -1,4 +1,4 @@
-package com.mevv.myframe.base;
+package com.mevv.myframe.common.base;
 
 import android.os.Handler;
 import android.support.v4.app.FragmentManager;

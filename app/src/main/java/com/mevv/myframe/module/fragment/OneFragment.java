@@ -6,7 +6,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 
 import com.mevv.myframe.R;
-import com.mevv.myframe.base.BaseRefreshListFragment;
+import com.mevv.myframe.common.base.BaseRefreshListFragment;
 import com.mevv.myframe.bean.OneBean;
 import com.mevv.myframe.common.util.TipUtil;
 import com.mevv.myframe.module.adapter.OneAdapter;

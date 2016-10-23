@@ -1,4 +1,4 @@
-package com.mevv.myframe.base;
+package com.mevv.myframe.common.base;
 
 import com.mevv.myframe.module.fragment.OneFragment;
 
