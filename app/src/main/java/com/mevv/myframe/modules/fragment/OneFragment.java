@@ -1,4 +1,4 @@
-package com.mevv.myframe.module.fragment;
+package com.mevv.myframe.modules.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +9,7 @@ import com.mevv.myframe.R;
 import com.mevv.myframe.common.base.BaseRefreshListFragment;
 import com.mevv.myframe.bean.OneBean;
 import com.mevv.myframe.common.util.TipUtil;
-import com.mevv.myframe.module.adapter.OneAdapter;
+import com.mevv.myframe.modules.adapter.OneAdapter;
 import com.mevv.myframe.widget.recyclerview.VRecyclerView;
 import com.mevv.myframe.widget.superadapter.OnItemClickListener;
 import com.mevv.myframe.widget.superadapter.SuperAdapter;

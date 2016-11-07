@@ -1,6 +1,6 @@
 package com.mevv.myframe.common.base;
 
-import com.mevv.myframe.module.fragment.OneFragment;
+import com.mevv.myframe.modules.fragment.OneFragment;
 
 /**
  * Created by VV on 2016/10/23.

@@ -1,4 +1,4 @@
-package com.mevv.myframe.module.activity;
+package com.mevv.myframe.modules.activity;
 
 
 import android.support.v4.app.FragmentTransaction;
@@ -6,7 +6,7 @@ import android.widget.FrameLayout;
 
 import com.mevv.myframe.R;
 import com.mevv.myframe.common.base.BaseActivity;
-import com.mevv.myframe.module.fragment.OneFragment;
+import com.mevv.myframe.modules.fragment.OneFragment;
 
 /**
  * Created by VV on 2016/10/23.

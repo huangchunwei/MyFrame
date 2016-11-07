@@ -1,4 +1,4 @@
-package com.mevv.myframe.module.adapter;
+package com.mevv.myframe.modules.adapter;
 
 import android.content.Context;
 import android.widget.TextView;

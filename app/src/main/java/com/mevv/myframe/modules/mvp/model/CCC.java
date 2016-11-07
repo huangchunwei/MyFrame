@@ -1,4 +1,4 @@
-package com.mevv.myframe.module.mvp.model;
+package com.mevv.myframe.modules.mvp.model;
 
 /**
  * Created by VV on 2016/10/22.
