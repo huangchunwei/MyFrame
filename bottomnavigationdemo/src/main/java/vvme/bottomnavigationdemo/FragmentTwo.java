@@ -3,8 +3,8 @@ package vvme.bottomnavigationdemo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
+
+import android.view.View;import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 /**
@@ -13,8 +13,7 @@ import android.view.ViewGroup;
 
 public class FragmentTwo extends Fragment {
 
-    public static FragmentTwo newInstance() {
-        Bundle args = new Bundle();
+    public static FragmentTwo newInstance() { Bundle args = new Bundle();
         FragmentTwo fragment = new FragmentTwo();
         fragment.setArguments(args);
         return fragment;

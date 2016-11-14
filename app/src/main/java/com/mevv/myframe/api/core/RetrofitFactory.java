@@ -15,10 +15,6 @@ import static com.mevv.myframe.constants.AppURL.BASE_URL;
 
 public class RetrofitFactory {
 
-    /**
-     * apiBase路径
-     */
-
     private static Retrofit sRetrofit;
     private static Retrofit sDefRetrofit;
 
