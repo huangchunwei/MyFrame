@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <vvme.camerademo.MyCameraView
+        android:id="@+id/myCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <vvme.camerademo.RectView
+        android:id="@+id/rectView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btn_takePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="10dp"
+        android:onClick="takePhoto"
+        android:text="拍照"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_exchangeCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:onClick="exchangeCamera"
+        android:text="切换"/>
+
+</FrameLayout>
