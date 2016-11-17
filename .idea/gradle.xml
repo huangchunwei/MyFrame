@@ -11,6 +11,9 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bottomnavigationdemo" />
             <option value="$PROJECT_DIR$/camerademo" />
+            <option value="$PROJECT_DIR$/eleme_demo" />
+            <option value="$PROJECT_DIR$/list_demo" />
+            <option value="$PROJECT_DIR$/permissiondemo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <vvme.list_demo.TimeTextView
+        android:id="@+id/ttv_timeView"
+        android:layout_width="58dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="计时器"/>
+
+</LinearLayout>

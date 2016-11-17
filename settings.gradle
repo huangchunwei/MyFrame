@@ -1,1 +1,2 @@
-include ':app', ':camerademo', ':bottomnavigationdemo'
+include ':list_demo', ':permissiondemo'
+include ':app', ':camerademo', ':bottomnavigationdemo', ':eleme_demo'
